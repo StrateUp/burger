@@ -1,0 +1,54 @@
+<div BACKGROUND="assets/images/burgersnfries.jpeg" BGCOLOR="#000000" BGPROPERTIES="FIXED">
+<h1>Eat Da Burger</h1>
+<h2>What kind of Burger would you like to eat?</h2>
+
+<form class="create-update-form" action="/" method="POST">
+	<div class="bgrform">
+		<input type="text" id="bgr" name="burgerTypes">
+		<button type="submit"> Submit Deliciousness</button>
+	</div>
+</form>
+
+<h3>Dare to eat it?</h3>
+<ul>
+	{{#each burger}}
+		<li>
+        {{this.burger}}
+
+        <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="edible" value="0">
+          <button type="submit">Devour it!</button>
+        </form>
+      </li>
+	{{/each}}
+</ul>
+
+<h3>No Regrets! Devoured!</h3>
+
+<div>
+<!-- <ol>
+	{{#each burgers}}
+		{{#if this.burgerTypes}}
+			<li>
+			  <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="text" name="enteredBurger" value="true">
+          <button type="submit">Devour it!</button>	
+			</li>
+	   {{/if}}
+  	{{/each}}
+</ol>
+<ol>
+	{{#each burgers}}
+		{{#if this.devoured}}
+			<li>
+			  <form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="text" name="devoured" value="true">
+          <button type="submit">Devour it!</button>	
+			</li>
+	   {{/if}}
+  	{{/each}}
+</ol> -->
+
+
+</div>
+</div>
