@@ -1,0 +1,10 @@
+.main {
+	background: url(burgersnfries.jpeg);
+    background-repeat: no-repeat;
+}
+
+li {
+  background: #FAEBD7;
+  margin: 5px;
+  padding: 5px;
+}
